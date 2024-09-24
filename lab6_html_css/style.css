@@ -1,0 +1,13 @@
+*{box-sizing: border-box;}
+.headertop{
+    border: solid blue 1px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.navleft, .navright{
+    width: 50%;
+    height: 100px;
+    border: red solid 1px;
+
+}
