@@ -14,6 +14,7 @@ body{background-color: rgb(240,240,240);}
     display: flex;
     flex-wrap: wrap;
 
+
 }
 .navleft div:nth-child(1){
     width: 100px;
@@ -102,9 +103,6 @@ body{background-color: rgb(240,240,240);}
     flex-wrap: wrap;
     justify-content: center;
 }
-.blogs{
-    width: 25%;
-}
 .cardcontainer, .blogs{
     height: 100%;
     margin-top: 40px;
@@ -131,4 +129,21 @@ body{background-color: rgb(240,240,240);}
 }
 .cardtitle:hover{
     text-decoration: underline;
+}
+/*------ Right Blog Column ------*/
+.blogs{
+    height: auto;
+    width: 25%;
+    padding: 20px;
+}
+.blogs h2{
+    color: darkslateblue;
+}
+/*- - CONTACT SECTION - -*/
+.footer{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 1.2em;
+    color: darkslateblue;
 }

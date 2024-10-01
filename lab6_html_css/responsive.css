@@ -1,0 +1,61 @@
+/*------ Breakkpoint :1230 px ------*/
+@media only screen and (max-width : 1230px){
+    .navleft, .navright{
+        width: 100%;
+        transition: ease-in-out 200ms;
+    }
+    .headertop{
+        height: auto;
+    }
+    .navright div:nth-child(1){
+        margin-left: 0px;
+    }
+    .navright, .navleft{
+        justify-content: center;
+    }
+    .links{width: 30%;}
+    .introimage{
+        width: 80%;
+    }
+    .introtitle{
+        font-size: 2.5em;
+        color: darkslateblue;
+    }
+    .bodyinfo{
+        width: 100%;
+    }
+    .cardcontainer{
+        margin-right: 20px;
+    }
+    .card{
+        width:42%;
+    }
+}
+/*------ Breakpoint : 900 px ------ */
+@media only screen and (max-width: 900px){
+    .navright{
+        display: none;
+    }
+    .cardcontainer{
+        width: 100%;}
+    .blogs{
+        width: 100%;
+    }
+    .card{
+        width: 90%;
+    }
+}
+/*------ Breakpoint : 600 px ------*/
+@media only screen and (max-width: 600px){
+    .navleft{width: 100%;}
+    .homeiconimg{display: none;}
+    .homeiconlink{font-size: 0.7em; text-align: center;}
+    .navlinks{padding: 10px}
+    .links{font-size: 0.7em;}
+    .introtitle{font-size: 1.2em; bottom: 0px;color: whitesmoke;}
+    .bodyinfo{
+        flex-wrap: wrap;
+    }
+    .cardcontainer{margin-right: 0px}
+    .footer{font-size: 1em;}
+}
