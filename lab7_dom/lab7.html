@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM by Daniel Quan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="daniel">Daniel Quan</h1>
+    <p>Welcome to DOM</p>
+    <p class="subtitle">Document Object Model</p>
+    <P>Fall 2024</P>
+
+    <form>
+        <p>Select your current age</p>
+        <label for="age1">18 to 20</label>
+        <input type="radio" name="groupages" id="age1" value="agegroup1">
+        <label for="age2">21 to 35</label>
+        <input type="radio" name="groupages" id="age2" value="agegroup2">
+    </form>
+
+    <!--Exercise-->
+    <main class="container"></main>
+        <section class="s1">
+            <p class="ps1">Welcome to DOM styling</p>
+            <p class="ps1">Try to change the font-size to 25px</p>
+        </section>
+        <section class="s2">
+            <div class="divs2"></div>
+            <div class="divs2"></div>
+        </section>
+</main>
+
+
+    <script>
+        // collect the elements
+        let h1name = document.getElementById("daniel");
+        let paragraphs = document.getElementsByTagName("p");
+        let subtitle = document.getElementsByClassName("subtitle")
+        let firstparagraph = document.querySelector("p")
+        let title = document.querySelector("#daniel")
+        let subtitle2 = document.querySelector(".subtitle")
+        let groupparahraphs = document.querySelectorAll("p")
+        let groupages2 = document.querySelector("#age2")
+
+        // change text content of the third parahraph
+        groupparahraphs[2].textContent = "Hello there!"
+        subtitle2.innerHTML = "<h3>The Tree Model in JavaScript</h3>";
+
+        // change the style
+        h1name.style.color = "magenta";
+        h1name.style.textAlign ="center";
+        subtitle2.style.backgroundColor = "lightpink";
+        subtitle2.style.padding = "15px";
+
+        //change or add class name
+        groupparahraphs[0].className = "colorblue";
+        groupparahraphs[2].setAttribute("class","colorblue");
+
+        //set attribute
+        groupages2.setAttribute("checked", "checked");
+
+        // EXERCISE
+// note: use querySelector() or querySelectorAll()
+// search for the first p with class ps1 and change the text content to "STUDENT'S FULL NAME"
+let firstP = document.querySelector(".ps1");
+firstP.textContent = "Daniel Quan";
+
+// search for the second p with class ps1 and change the font-size to 25px  and color to olive
+let secondP = document.querySelectorAll(".ps1")[1];
+secondP.style.fontSize = "25px";
+secondP.style.color = "olive";
+
+// search for the first div with class divs2 and change the background color to indigo
+let firstDiv = document.querySelector(".divs2");
+firstDiv.style.backgroundColor = "indigo";
+
+// search for the second div with class divs2 and change the width to 300px
+let secondDiv = document.querySelectorAll(".divs2")[1];
+secondDiv.style.width = "300px";
+
+    </script>
+</body>
+</html>
