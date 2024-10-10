@@ -42,3 +42,8 @@ circle.onmouseout = function(){
     counter++;
     circle.textContent = counter;
 }
+let resetBtn = document.querySelector('.resetbtn');
+resetbtn.onclick = function() {
+    counter = 0;
+    circle.textContent = counter;
+};
