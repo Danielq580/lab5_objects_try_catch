@@ -52,6 +52,8 @@ html{scroll-behavior: smooth;}
     height: 70px;
     text-align: center;
     display: none;
+    transition: ease-in-out 500ms;
+
 }
 .toTop a{
     color: white;

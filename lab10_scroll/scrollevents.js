@@ -38,11 +38,10 @@ let toTop = document.querySelector(".toTop")
 window.addEventListener("scroll", function(){
     let pexelsfromtop = this.window.scrollY // get the pexels when scroll down
     //test window.scrollY
-    console.log(pexelsfromtio)
+    console.log(pexelsfromtop)
     
-    if (pexelsfromtio>300){
+    if(pexelsfromtop>300){
         toTop.style.display = "block"
-        toTop.style.transition = "ease-in-out 500ms"
     }
     else{
         toTop.style.display = "none"
