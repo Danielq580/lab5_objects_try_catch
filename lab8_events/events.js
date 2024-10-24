@@ -43,7 +43,7 @@ circle.onmouseout = function(){
     circle.textContent = counter;
 }
 let resetBtn = document.querySelector('.resetbtn');
-resetbtn.onclick = function() {
+resetBtn.onclick = function() {
     counter = 0;
     circle.textContent = counter;
 };
