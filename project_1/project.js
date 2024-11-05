@@ -52,6 +52,33 @@ const animalsSection = document.getElementById('animals');
 const shapesSection = document.getElementById('shapes');
 
 // animal
+const modal = document.getElementById('animal-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalImage = document.getElementById('modal-image');
+const modalDescription = document.getElementById('modal-description');
+const closeButton = document.querySelector('.close-button');
+
+
+function showModal(animal) {
+    modalTitle.textContent = animal.name;
+    modalImage.src = animal.image;
+    modalDescription.textContent = `This is a ${animal.name}!`;
+    modal.style.display = 'block';
+}
+
+
+closeButton.onclick = function() {
+    modal.style.display = 'none';
+}
+
+
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// animal
 function showAnimals() {
     const animals = [
         { name: 'Dog', image: 'images/dog.jpg' },
@@ -67,11 +94,12 @@ function showAnimals() {
         button.classList.add('animal-button'); 
         button.style.backgroundImage = `url(${animal.image})`; 
         button.style.backgroundSize = 'cover'; 
-        button.onclick = () => alert(`This is a ${animal.name}!`);
+        button.onclick = () => showModal(animal); // Show modal on click
         animalsSection.appendChild(button);
     });
 }
 showAnimals();
+
 // shape
 function showShapes() { 
     const shapes = [
