@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    section {
+        margin: 5px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    section {
+        margin: 15px;
+    }
+}
+
+@media (min-width: 1025px) {
+    section {
+        margin: 20px;
+    }
+}

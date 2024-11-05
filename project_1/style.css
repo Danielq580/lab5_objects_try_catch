@@ -1,27 +1,147 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 header {
-    background-color: hsl(48, 90%, 49%);
-    padding: 20px;
+    background-image: url('images/kids.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center; 
+    padding: 60px;
+    text-align: center;
+    color: rgb(255, 145, 0);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f0ff1cd7;
 }
 
 section {
-    margin: 20px auto;
-    padding: 15px;
-    width: 80%;
-    max-width: 600px;
-    border: 2px solid #333;
-    border-radius: 8px;
-    background-color: #fffbeb;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center; 
+}
+
+#colors {
+    background-image: url('images/color.jpg'); 
+}
+
+#numbers {
+    background-image: url('images/number.jpg'); 
+}
+
+#animals {
+    background-image: url('images/animal.jpg'); 
+}
+
+#shapes {
+    background-image: url('images/shapes\ \(2\).jpg'); 
 }
 
 footer {
-    background-color: #d7d55f;
-    color: #fff;
+    text-align: center;
     padding: 10px;
+    background-color: #ffcc00;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+button {
+    width: 150px; 
+    height: 150px; 
+    font-size: 20px; 
+    margin: 10px; 
+    border: none; 
+    border-radius: 10px;
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+.color-button {
+    color: white;
+}
+
+.number-button {
+    background-color: #348ea5;
+    color: white;
+}
+
+.animal-button {
+    background-color: #ffc107;
+    color: rgb(242, 255, 63);
+    background-size: cover; 
+}
+
+#cat-button {
+    background-image: url('images/cat.jpg'); 
+}
+
+#dog-button {
+    background-image: url('images/dog.jpg');
+}
+
+#cow-button {
+    background-image: url('images/cow.jpg'); 
+}
+
+.shape-button {
+    background-color: #df9424; 
+    color: rgb(219, 252, 34);
+    background-size: cover; 
+}
+
+#circle-button {
+    background-image: url('images/circle.jpg'); 
+}
+
+#square-button {
+    background-image: url('images/square.png'); 
+}
+
+#triangle-button {
+    background-image: url('images/triangle.jpg'); 
+}
+
+.go-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
