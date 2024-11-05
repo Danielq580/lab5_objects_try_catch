@@ -94,7 +94,7 @@ function showAnimals() {
         button.classList.add('animal-button'); 
         button.style.backgroundImage = `url(${animal.image})`; 
         button.style.backgroundSize = 'cover'; 
-        button.onclick = () => showModal(animal); // Show modal on click
+        button.onclick = () => showModal(animal); 
         animalsSection.appendChild(button);
     });
 }
