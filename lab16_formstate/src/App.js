@@ -19,7 +19,7 @@ function App() {
   }
 
   // function to submit the form
-  const submitform = function(){
+  const submitform = function(e){
     e.preventDefault()
     alert(`Welcome to React form ${inputs.username} \nYour age is ${inputs.age}`)
   }
