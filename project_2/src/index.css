@@ -1,0 +1,107 @@
+nav {
+  display: flex;
+  gap: 10px;
+  background: #333;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Grid container for cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+  gap: 16px; /* Space between cards */
+  padding: 20px; /* Optional, for inner spacing */
+}
+
+/* Individual card styles (same as before) */
+.card {
+  height: 250px; /* Adjust card height */
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px; /* Adjust image height */
+  object-fit: cover;
+}
+Walk with Nature
+.card h2 {
+  margin: 8px 0;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+/* Style for the page container */
+/* Style for the page container */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content horizontally */
+  justify-content: flex-start; /* Aligns content to the top */
+  height: 100vh; /* Full height of the viewport */
+  padding-top: 20px; /* Adds padding at the top */
+}
+
+/* Style for the intro text (h1 and p) */
+.intro-text {
+  text-align: center; /* Centers the text */
+  margin-bottom: 30px; /* Adds space below the text */
+}
+
+/* Optional: Style for h1 and p for better visibility */
+.intro-text h1 {
+  font-size: 36px; /* Adjust size of the heading */
+  margin-bottom: 10px;
+}
+
+.intro-text p {
+  font-size: 18px; /* Adjust size of the paragraph */
+  color: #555; /* Optional color for the paragraph */
+}
+
+/* Style for the image */
+.home-image {
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Optional: limits the width on larger screens */
+  height: auto; /* Ensures the image maintains its aspect ratio */
+  margin-bottom: 30px; /* Optional: adds space below the image */
+}
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
