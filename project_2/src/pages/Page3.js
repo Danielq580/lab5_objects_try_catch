@@ -5,7 +5,6 @@ import ModalWindow from "../components/ModalWindow";
 function Page1() {
   const [modalData, setModalData] = useState(null);
 
-  // Array of six cards with images, titles, and descriptions
   const cards = [
     { title: "Volcano", image: "/images/volcano.jpg", description: "Volcanoes are powerful natural forces that erupt molten rock and ash." },
     { title: "Volcano", image: "/images/volcano1.jpg", description: "They create new landforms and can dramatically change the surrounding environment." },
@@ -15,10 +14,7 @@ function Page1() {
     { title: "Desert", image: "/images/desert2.jpg", description: "Sand dunes and rocky plateaus dominate the desert terrain, creating a striking landscape." }
   ];
 
-  // Open modal with card data
   const openModal = (data) => setModalData(data);
-
-  // Close modal
   const closeModal = () => setModalData(null);
 
   return (

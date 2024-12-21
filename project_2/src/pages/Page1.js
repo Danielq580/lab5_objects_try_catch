@@ -5,7 +5,6 @@ import ModalWindow from "../components/ModalWindow";
 function Page1() {
   const [modalData, setModalData] = useState(null);
 
-  // Array of six cards with images, titles, and descriptions
   const cards = [
     { title: "Star", image: "/images/star.jpg", description: "Stars are massive, glowing balls of gas that release energy through nuclear fusion, lighting up the night sky with their brilliance." },
     { title: "Star", image: "/images/star1.jpg", description: "In many cultures, stars represent hope, guidance, and destiny, often used for navigation and symbolizing fame and success." },
@@ -15,10 +14,8 @@ function Page1() {
     { title: "Tree", image: "/images/tree2.jpg", description: "Trees symbolize strength, resilience, and the passage of time." }
   ];
 
-  // Open modal with card data
   const openModal = (data) => setModalData(data);
 
-  // Close modal
   const closeModal = () => setModalData(null);
 
   return (

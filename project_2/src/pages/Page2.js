@@ -5,7 +5,6 @@ import ModalWindow from "../components/ModalWindow";
 function Page1() {
   const [modalData, setModalData] = useState(null);
 
-  // Array of six cards with images, titles, and descriptions
   const cards = [
     { title: "River", image: "/images/river.jpg", description: "Rivers carve through the land, creating valleys and nourishing ecosystems." },
     { title: "River", image: "/images/river1.jpg", description: "They flow from mountains to seas, carrying water and nutrients." },
@@ -15,10 +14,7 @@ function Page1() {
     { title: "Mountain", image: "/images/mountain2.jpg", description: "Mountains play a crucial role in shaping weather patterns and ecosystems." }
   ];
 
-  // Open modal with card data
   const openModal = (data) => setModalData(data);
-
-  // Close modal
   const closeModal = () => setModalData(null);
 
   return (
