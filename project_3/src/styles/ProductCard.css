@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    padding: 10px;
+  }
+
+  .product-image {
+    height: auto;
+  }
+}

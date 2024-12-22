@@ -1,0 +1,12 @@
+.cart-page {
+  padding: 20px;
+}
+
+.totals {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.totals p {
+  margin: 5px 0;
+}
