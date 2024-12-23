@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import tesla from '../images/tesla.jpg';
 import bmw from '../images/bmw.jpg';
 import audi from '../images/audi.jpg';
@@ -10,7 +10,11 @@ import porsche from '../images/porsche.jpg';
 import camry from '../images/camry.jpg';
 import civic from '../images/honda.jpg';
 
-function Home({ addToCart }) {
+
+function CarDetails({ addToCart }) {
+  const { id } = useParams();
+
+  // Car data
   const cars = [
     {
       id: 1,
@@ -77,53 +81,37 @@ function Home({ addToCart }) {
     },
   ];
 
+  const car = cars.find(car => car.id === parseInt(id));
+
+  if (!car) {
+    return <h2>Car not found</h2>;
+  }
+
   return (
-    <div style={{ padding: '20px' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Our Cars</h1>
-      <div
+    <div style={{ padding: '20px', textAlign: 'center' }}>
+      <h1>{car.title}</h1>
+      <img
+        src={car.image}
+        alt={car.title}
+        style={{ width: '60%', height: 'auto', margin: '20px 0' }}
+      />
+      <p style={{ fontSize: '18px' }}>{car.description}</p>
+      <h2>${car.price.toLocaleString()}</h2>
+      <button
+        onClick={() => addToCart(car)}
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '20px',
+          padding: '10px 20px',
+          backgroundColor: '#007bff',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
         }}
       >
-        {cars.map(car => (
-          <div
-            key={car.id}
-            style={{
-              border: '1px solid #ccc',
-              borderRadius: '8px',
-              padding: '10px',
-              textAlign: 'center',
-            }}
-          >
-            <Link to={`/car/${car.id}`}>
-              <img
-                src={car.image}
-                alt={car.title}
-                style={{ width: '100%', height: '150px', objectFit: 'cover' }}
-              />
-              <h2>{car.title}</h2>
-              <p>${car.price.toLocaleString()}</p>
-            </Link>
-            <button
-              onClick={() => addToCart(car)}
-              style={{
-                padding: '10px 15px',
-                backgroundColor: '#007bff',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '5px',
-                cursor: 'pointer',
-              }}
-            >
-              Add to Cart
-            </button>
-          </div>
-        ))}
-      </div>
+        Add to Cart
+      </button>
     </div>
   );
 }
 
-export default Home;
+export default CarDetails;
